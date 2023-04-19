@@ -3,17 +3,20 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
+
 export default defineConfig({
-  basePath: '/studio',
-  name: 'default',
-  title: 'black-wolf',
+    basePath: '/studio',
+    name: 'default',
+    title: 'black-wolf',
 
-  projectId: 'nymu3lkt',
-  dataset: 'production',
+    projectId,
+    dataset,
 
-  plugins: [deskTool(), visionTool()],
+    plugins: [deskTool(), visionTool()],
 
-  schema: {
-    types: schemaTypes,
-  },
+    schema: {
+        types: schemaTypes,
+    },
 })
