@@ -11,8 +11,8 @@ export default defineConfig({
     name: 'default',
     title: 'black-wolf',
 
-    projectId,
-    dataset,
+    projectId: projectId || "",
+    dataset: dataset || "",
 
     plugins: [deskTool(), visionTool()],
 
